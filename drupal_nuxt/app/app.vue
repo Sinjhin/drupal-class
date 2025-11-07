@@ -2,6 +2,18 @@
   <div class="container">
     <h1>TODO App</h1>
 
+    <div class="info-card">
+      <p>
+        <strong>Drupal CMS Admin:</strong>
+        <a href="http://web.4rd.ai:3000" target="_blank" rel="noopener noreferrer">http://web.4rd.ai:3000</a>
+      </p>
+      <p>Default credentials: <code>admin</code> / <code>admin</code></p>
+      <p>
+        <strong>Source Code:</strong>
+        <a href="https://github.com/Sinjhin/drupal-class" target="_blank" rel="noopener noreferrer">https://github.com/Sinjhin/drupal-class</a>
+      </p>
+    </div>
+
     <div v-if="error" class="error">
       <strong>Error:</strong> {{ error }}
     </div>
@@ -314,5 +326,42 @@ h1 {
 .empty-state p {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
+}
+
+.info-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.info-card p {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.info-card p:last-child {
+  margin-bottom: 0;
+}
+
+.info-card a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.info-card a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+.info-card code {
+  background-color: var(--bg-primary);
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  color: var(--accent-color);
 }
 </style>
